@@ -1,5 +1,26 @@
 {
+  "intern": {
     "name": "John Doe",
-    "referralCode": "REF12345",
-    "totalRaised": 5000
+    "referralCode": "johndoe153",
+    "totalDonations": 12500,
+    "rewards": [
+      {
+        "title": "Bronze Badge",
+        "description": "Raised ₹1000+"
+      },
+      {
+        "title": "Silver Badge",
+        "description": "Raised ₹5000+"
+      },
+      {
+        "title": "Gold Badge",
+        "description": "Raised ₹10000+"
+      }
+    ]
+  },
+  "leaderboard": [
+    { "name": "Emma perk", "donations": 80000 },
+    { "name": "Sai Joy", "donations": 24000 },
+    { "name": "Klark Ray", "donations": 20000 }
+  ]
 }
