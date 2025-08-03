@@ -1,0 +1,177 @@
+.leaderboard-box{
+    overflow: hidden;
+    margin-inline: auto;
+    height: 600px;
+      width: 90%;
+  max-width: 900px;
+    border:2px solid blue;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.leaderboard-box>h1{
+    width: 100%;
+    text-align: center;
+    color: rgb(57, 57, 255);
+    padding-top: 15px;
+}
+.loading{
+    display: flex;
+    height: 70%;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+
+.leaderboard-box>img{
+    position: absolute;
+    left:-50px;
+    bottom:90px;
+    height: 450px;
+    z-index: -10;
+}
+
+.leadboard-data-box{
+    margin-top: 70px;
+    width: 100%;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.leadboard-data{
+   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.lead-row{
+    width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height:50px;
+    border: 1.5px solid blue;
+    box-shadow: 8px 8px 15px rgba(61, 61, 61, 0.089);
+    border-radius: 5px;
+    padding: 15px;
+    padding-left: 70px;
+    background: rgba(255, 255, 255, 0.656);  
+  
+}
+/* targetting the first child */
+
+.leadboard-data > :first-child::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  height: 80px;
+  width: 50px;
+  background-image: url("../../assets/pos1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.leadboard-data > :nth-child(2)::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  height: 80px;
+  width: 50px;
+  background-image: url("../../assets/pos2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.leadboard-data > :nth-child(3)::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  height: 80px;
+  width: 50px;
+  background-image: url("../../assets/pos3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.leadboard-data > :nth-child(4)::before {
+  content: "4.";
+  font-size: 20px;
+  position: absolute;
+  left: 24px;
+  top: 12px;
+  height: 80px;
+  width: 50px;
+}
+.leadboard-data > :nth-child(5)::before {
+  content: "5.";
+  font-size: 20px;
+  position: absolute;
+  left: 24px;
+  top: 12px;
+  height: 80px;
+  width: 50px;
+}
+.don-text{
+    color: rgb(0, 76, 255);
+}
+.leaderboard-box>button{
+    border: none;
+    position:absolute;
+    right: 40px;
+    bottom: 30px;
+    font-size: 18px;
+    background-color: transparent;
+    color: blue;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* media queries */
+
+@media (max-width:700px){
+  .leadboard-data{
+    width: 100%;
+  }
+  .lead-row{
+    width: 98%;
+
+  }
+}
+
+@media (max-width:550px){
+  .leadboard-data{
+    width: 100%;
+  }
+  .lead-row{
+    width: 98%;
+    padding-left: 57px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:400px){
+  .leaderboard-box{
+    width: 100%;
+  }
+  .leadboard-data{
+    width: 100%;
+  }
+  .lead-row{
+    width: 98%;
+    padding-left: 57px;
+    font-size: 14px;
+  }
+}
+
+
+

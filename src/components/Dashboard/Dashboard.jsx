@@ -8,7 +8,6 @@ const Dashboard = () => {
   const navigate = useNavigate();
   //data
   const [intern, setIntern] = useState(null);
-  const [leaderboard, setLeaderboard] = useState(null);
 
   //fetching userdata will execute only at first render
   useEffect(() => {
@@ -17,14 +16,12 @@ const Dashboard = () => {
         const res = await fetch("/data.json"); //fetching data from public/data.json
         const data = await res.json(); //converting to js object
         setIntern(data.intern);
-        setLeaderboard(data.leaderboard);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
   }, []);
-
 
   function handleClick() {
     navigate("/");
@@ -39,37 +36,41 @@ const Dashboard = () => {
 
       {!intern && <p className="loading">Loading...</p>}
 
-      {
-        intern &&
+      {intern && (
         <div className="userData">
-        <h2>Welcome , <span>{intern.name}</span> 👋</h2>
-        <p><b>Referral Code :</b> {intern.referralCode}</p>
-        <p><b>Total Donations :</b> ₹{intern.totalDonations}</p>
+          <h2>
+            Welcome , <span>{intern.name}</span> 👋
+          </h2>
+          <p>
+            <b>Referral Code :</b> {intern.referralCode}
+          </p>
+          <p>
+            <b>Total Donations :</b> ₹{intern.totalDonations}
+          </p>
 
-        <h2><span>Rewards</span></h2>
-        <ul className="rewards">
-          {intern.rewards.map((reward, index) => (
-            <li key={index} className="badge-obtained">
-              <div className="image-container">
-                <img
-                className={`medal${index}`}
-                src={`/images/medal${index}.png`}
-              />
-              </div>
-              <div>
-                <p className="medal-name">
-                <b>{reward.title}</b>
-              </p>
-              <p>{reward.description}</p>
-              </div>
-              
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      }
-      
+          <h2>
+            <span>Rewards</span>
+          </h2>
+          <ul className="rewards">
+            {intern.rewards.map((reward, index) => (
+              <li key={index} className="badge-obtained">
+                <div className="image-container">
+                  <img
+                    className={`medal${index}`}
+                    src={`/images/medal${index}.png`}
+                  />
+                </div>
+                <div>
+                  <p className="medal-name">
+                    <b>{reward.title}</b>
+                  </p>
+                  <p>{reward.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="nav-bar">
         <div className="button-box">
@@ -77,7 +78,9 @@ const Dashboard = () => {
             style={{ fontSize: "24px", color: "grey" }}
             className="btn-icon"
           />
-          <button className="open-lead" onClick={openLeaderBoard}>Leaderboard</button>
+          <button className="open-lead" onClick={openLeaderBoard}>
+            Leaderboard
+          </button>
         </div>
 
         <div className="button-box">
@@ -85,7 +88,9 @@ const Dashboard = () => {
             style={{ fontSize: "24px", color: "grey" }}
             className="btn-icon"
           />
-          <button className="log-out" onClick={handleClick}>Log Out</button>
+          <button className="log-out" onClick={handleClick}>
+            Log Out
+          </button>
         </div>
       </div>
     </div>

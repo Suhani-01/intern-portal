@@ -1,138 +1,201 @@
-.dashboard-box{
-    overflow: hidden;
-    height: 600px;
-    width: 900px;
-    border:2px solid blue;
-    border-radius: 20px;
-    position: relative;
-    display: flex;
-    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
-    flex-direction: column;
-    align-items: center;
+.dashboard-box {
+  overflow: hidden;
+  height: 600px;
+  width: 90%;
+  max-width: 900px;
+  margin-inline: auto;
+  border: 2px solid blue;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  align-items: center;
 }
-.dash-bg{
-    position: absolute;
-    height: 300px;
-    bottom: -70px;
-    left: -10px;
-    z-index: -10;
-}
-
-
-.heading{
-    width: 100%;
-    text-align: center;
-    color: rgb(57, 57, 255);
-    padding-left: 20px;
-    padding-top: 15px;
-}
-.loading{
-    display: flex;
-    height: 70%;
-    width: 100%;
-    justify-content:center;
-    align-items: center;
-    font-weight: bold;
+.dash-bg {
+  position: absolute;
+  height: 300px;
+  bottom: -70px;
+  left: -10px;
+  z-index: -10;
 }
 
-.userData{
-    width: 70%;
-    margin-top: 10px;
+.heading {
+  width: 100%;
+  text-align: center;
+  color: rgb(57, 57, 255);
+  padding-left: 20px;
+  padding-top: 15px;
 }
-.userData>h2{
-    font-size: 22px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+.loading {
+  display: flex;
+  height: 70%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
-.userData>h2>span{
-    color: blue;
+
+.userData {
+  width: 70%;
+  margin-top: 10px;
 }
-.userData>p{
-    margin-left: 80px;
+.userData > h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.userData > h2 > span {
+  color: blue;
+}
+.userData > p {
+  margin-left: 80px;
 }
 
 /******* rewards ***********/
-.badge-obtained{
-    background-color: rgba(104, 104, 250, 0.778);
-    border-radius: 20px;
-    display: flex;
-    color: white;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height:200px;
-    border: 2px solid blue;
-    cursor: pointer;
+.rewards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+}
 
+.badge-obtained {
+  background-color: rgba(104, 104, 250, 0.778);
+  border-radius: 20px;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 200px;
+  border: 2px solid blue;
+  cursor: pointer;
 }
-.image-container{
-    height:65%;
+.image-container {
+  height: 65%;
 }
-.medal0,.medal1{
-    width:100px;
-    height:100px;
-    margin-bottom: 20px;
+.medal0,
+.medal1 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
 }
-.medal2{
-    width:115px;
-    height:115px;
-    margin-bottom: 20px;
+.medal2 {
+  width: 115px;
+  height: 115px;
+  margin-bottom: 20px;
 }
-.medal-name{
-    color: yellow;
-    width: 100%;
-    text-align: center;
-}
-.rewards{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    list-style: none;
+.medal-name {
+  color: yellow;
+  width: 100%;
+  text-align: center;
 }
 
 /* leaderboard and logout */
-.nav-bar{
-    position: absolute;
-    bottom: 20px;
+.nav-bar {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.button-box {
+  position: relative;
+}
+.btn-icon {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+
+.nav-bar button {
+  padding-left: 35px;
+  padding-right: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.open-lead {
+  background-color: #e9cc50;
+  border: 2px solid #e9cc50;
+  color: black;
+  font-weight: bold;
+}
+.log-out {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  border: 2px solid blue;
+}
+
+
+/* media queries */
+@media (max-width: 700px) {
+  .userData > p {
+    margin-left: 30px;
+  }
+  .badge-obtained {
+    height: 150px;
+  }
+  .medal0,
+  .medal1 {
+    height: 80px;
+    width: 80px;
+  }
+  .medal2 {
+    height: 90px;
+    width: 90px;
+  }
+  li > div > p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  .userData {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    padding-right: 20px;
-
+    text-align: center;
+  }
+  .userData > h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  .userData > p {
+    margin-left: 0px;
+  }
+  .rewards{
+    padding-inline: 20px;
+  }
+  .badge-obtained {
+    height: 130px;
+    width: 110px;
+  }
+  .medal0,
+  .medal1 {
+    height: 60px;
+    width: 60px;
+  }
+  .medal2 {
+    height: 70px;
+    width: 70px;
+  }
+  li > div > p {
+    font-size: 10px;
+  }
 }
 
-.button-box{
-    position: relative;
-}
-.btn-icon{
-    position: absolute;
-    left:10px;
-    top:8px; 
-}
-
-.nav-bar button{
-    padding-left: 35px;
-    padding-right: 20px;
-    font-size: 15px;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom:10px;
-    font-weight: bold;
-    cursor: pointer;
-
-}
-
-.open-lead{
-    background-color: #e9cc50;
-    border: 2px solid #e9cc50;
-    color: black;
-    font-weight: bold;
-}
-.log-out{
-    background-color:blue;
-    color: white;
-    font-weight: bold;
-    border: 2px solid blue;
+@media (max-width:400px){
+    .dashboard-box{
+        width: 100%;
+    }
 }

@@ -19,8 +19,25 @@
     ]
   },
   "leaderboard": [
-    { "name": "Emma perk", "donations": 80000 },
-    { "name": "Sai Joy", "donations": 24000 },
-    { "name": "Klark Ray", "donations": 20000 }
+    {
+      "name": "Emma perk",
+      "donations": 80000
+    },
+    {
+      "name": "Sai Joy",
+      "donations": 75000
+    },
+    {
+      "name": "Klark Ray",
+      "donations": 50000
+    },
+    {
+      "name": "Jay Hook",
+      "donations": 49000
+    },
+    {
+      "name": "Cane Key",
+      "donations": 30000
+    }
   ]
 }
