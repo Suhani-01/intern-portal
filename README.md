@@ -5,9 +5,9 @@ A simple, fully responsive **Intern Dashboard** built using **React** with dummy
 
 ## 📸 Screenshots
 
-![Login Screenshot](c:\Users\suhan\Pictures\Screenshots\Screenshot 2025-08-04 144411.png)  
-![Dashboard Screenshot](c:\Users\suhan\Pictures\Screenshots\Screenshot 2025-08-04 144425.png)  
-![Leaderboard Screenshot](c:\Users\suhan\Pictures\Screenshots\Screenshot 2025-08-04 144438.png)
+![Login Screenshot](./screenshots/Loginpage.png)  
+![Dashboard Screenshot](./screenshots/Dashboardpage.png)  
+![Leaderboard Screenshot](./screenshots/Leaderboardpage.png)
 
 ## 🚀 Features
 
