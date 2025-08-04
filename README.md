@@ -1,70 +1,101 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🌐 Intern Portal (Frontend Only)
 
-## Available Scripts
+A simple, fully responsive **Intern Dashboard** built using **React** with dummy data served from static JSON (no backend used).
 
-In the project directory, you can run:
+## 📸 Screenshots
 
-### `npm start`
+![Login Screenshot](c:\Users\suhan\Pictures\Screenshots\Screenshot 2025-08-04 144411.png)  
+![Dashboard Screenshot](c:\Users\suhan\Pictures\Screenshots\Screenshot 2025-08-04 144425.png)  
+![Leaderboard Screenshot](c:\Users\suhan\Pictures\Screenshots\Screenshot 2025-08-04 144438.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔐 Dummy Login Page (no authentication)
+- 👤 Intern Dashboard showing:
+  - Intern Name
+  - Referral Code
+  - Total Donations Raised
+  - Static Rewards Section
+- 🏆 Leaderboard (from dummy data)
+- 🎨 Clean, responsive UI
+- 📁 Fully hosted frontend (on Vercel)
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React (Create React App)
+- **Data**: Static `data.json` in `public/data/`
+- **Hosting**: Vercel
 
-### `npm run build`
+## 📁 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+intern-portal/
+│
+├── public/
+│   ├── images/
+│   ├── data.json       # Contains intern info and leaderboard
+│   └── index.html   
+│          
+├── src/
+│   ├── components/
+│   │   ├── Dashboard/    # Displays intern data + rewards
+│   │   │    ├── Dashboard.css
+│   │   │    └── Dashboard.jsx
+│   │   │
+│   │   ├── Leaderboard/       # Displays leaderboard
+│   │   │    ├── Leaderboard.css
+│   │   │    └── Leaderboard.jsx
+│   │   │
+│   │   └──  Login/             # Displays login page
+│   │        ├── Login.css
+│   │        └── Login.jsx
+│   │   
+│   ├── App.js              # Main app entry
+│   └── App.css             # Basic styling
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📄 Data Format
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `/public/data.json`
 
-### `npm run eject`
+```json
+{
+  "intern": {
+    "name": "John Doe",
+    "referralCode": "johndoe153",
+    "totalDonations": 12500,
+    "rewards": [
+      {
+        "title": "Bronze Badge",
+        "description": "Raised ₹1000+"
+      },
+      ...
+    ]
+  },
+  "leaderboard": [
+    {
+      "name": "Emma perk",
+      "donations": 80000
+    },
+    ...
+  ]
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🌐 Live Demo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🔗 [View Live Site on Vercel](https://your-vercel-site.vercel.app)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧑‍💻 How to Run Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/your-username/intern-portal.git
+cd intern-portal
+npm install
+npm start
+```
 
-## Learn More
+## 📬 Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to connect on [LinkedIn](www.linkedin.com/in/suhani01) or email at `suhaninegi124@gmail.com`
