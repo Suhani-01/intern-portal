@@ -85,7 +85,7 @@ intern-portal/
 
 ## 🌐 Live Demo
 
-🔗 [View Live Site on Vercel](https://your-vercel-site.vercel.app)
+🔗 [View Live Site on Vercel](intern-portal-silk.vercel.app)
 
 ## 🧑‍💻 How to Run Locally
 
