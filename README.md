@@ -1,7 +1,7 @@
 
 # 🌐 Intern Portal (Frontend Only)
 
-A simple, fully responsive **Intern Dashboard** built using **React** with dummy data served from static JSON (no backend used).
+A simple, fully responsive **Intern Dashboard** built using **React** with dummy data served from static JSON .
 
 ## 📸 Screenshots
 
@@ -19,12 +19,12 @@ A simple, fully responsive **Intern Dashboard** built using **React** with dummy
   - Static Rewards Section
 - 🏆 Leaderboard (from dummy data)
 - 🎨 Clean, responsive UI
-- 📁 Fully hosted frontend (on Vercel)
+- 📁 Fully hosted (on Vercel)
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: React (Create React App)
-- **Data**: Static `data.json` in `public/data/`
+- **Data**: Static `data.json` in `public/`
 - **Hosting**: Vercel
 
 ## 📁 Project Structure
